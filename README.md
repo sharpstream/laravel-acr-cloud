@@ -4,7 +4,7 @@
 
 ### Compatibility
 
-This package is using the ACR Cloud php 7.2 executible.
+This package is using the ACRCloud php 7.2 executible.
 This requires Laravel 5.6 or greater
 
 ### Composer
@@ -19,7 +19,7 @@ composer require sharpstream/acrcloud:1.0
 * Restart PHP
 
 ## Envirnonment Variables
-This package requires a few variables to be added to your projects .env file. All of the values for which can be found by logging into your ACR Cloud Account.
+This package requires a few variables to be added to your projects .env file. All of the values for which can be found by logging into your ACRCloud Account.
 
 Your host and request url will differ dependend on your region.
 
