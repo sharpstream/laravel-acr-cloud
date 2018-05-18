@@ -1,4 +1,4 @@
-# Laravel ACR Cloud Package
+# Laravel ACRCloud Package
 
 ## Installation
 
