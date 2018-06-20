@@ -59,7 +59,7 @@ class Recognizer
     public function recognizeByFile($filePath, $startSeconds, $recognizerAudioLength = 10)
     {
         if (!file_exists($filePath)) {
-            return ACRCloudExceptionCode::getCodeResult(ACRCloudExceptionCode::$GEN_FP_ERROR);
+            return ExceptionCode::getCodeResult(ExceptionCode::$GEN_FP_ERROR);
         }
 
         $query_data = array();
@@ -170,7 +170,7 @@ class Recognizer
             $sample_hum_bytes = 0;
             if (array_key_exists('sample', $query_data)) {
                 if ($query_data["sample"] == false) {
-                    return ACRCloudExceptionCode::getCodeResult(ACRCloudExceptionCode::$GEN_FP_ERROR);
+                    return ExceptionCode::getCodeResult(ExceptionCode::$GEN_FP_ERROR);
                 }
                 $post_arrays["sample"] = $query_data["sample"];
                 $sample_bytes = strlen($query_data["sample"]);
@@ -178,14 +178,14 @@ class Recognizer
             }
             if (array_key_exists('sample_hum', $query_data)) {
                 if ($query_data["sample_hum"] == false) {
-                    return ACRCloudExceptionCode::getCodeResult(ACRCloudExceptionCode::$GEN_FP_ERROR);
+                    return ExceptionCode::getCodeResult(ExceptionCode::$GEN_FP_ERROR);
                 }
                 $post_arrays["sample_hum"] = $query_data["sample_hum"];
                 $sample_hum_bytes = strlen($query_data["sample_hum"]);
                 $post_arrays["sample_hum_bytes"] = $sample_bytes;
             }
             if ($sample_bytes == 0 && $sample_hum_bytes == 0) {
-                return ACRCloudExceptionCode::getCodeResult(ACRCloudExceptionCode::$NO_RESULT);
+                return ExceptionCode::getCodeResult(ExceptionCode::$NO_RESULT);
             }
 
             $ch = curl_init();
@@ -200,20 +200,20 @@ class Recognizer
             curl_close($ch);
 
             if ($errno == 28) {
-                return ACRCloudExceptionCode::getCodeResultMsg(ACRCloudExceptionCode::$HTTP_ERROR, "HTTP TIMEOUT");
+                return ExceptionCode::getCodeResultMsg(ExceptionCode::$HTTP_ERROR, "HTTP TIMEOUT");
             } elseif ($errno) {
-                return ACRCloudExceptionCode::getCodeResultMsg(ACRCloudExceptionCode::$UNKNOW_ERROR, "errno:" . $errno);
+                return ExceptionCode::getCodeResultMsg(ExceptionCode::$UNKNOW_ERROR, "errno:" . $errno);
             }
 
             try {
                 if (!json_decode($result)) {
-                    return ACRCloudExceptionCode::getCodeResultMsg(ACRCloudExceptionCode::$JSON_ERROR, $result);
+                    return ExceptionCode::getCodeResultMsg(ExceptionCode::$JSON_ERROR, $result);
                 }
             } catch (\Exception $e) {
-                return ACRCloudExceptionCode::getCodeResult(ACRCloudExceptionCode::$JSON_ERROR);
+                return ExceptionCode::getCodeResult(ExceptionCode::$JSON_ERROR);
             }
         } catch (\Exception $e) {
-            $result = ACRCloudExceptionCode::getCodeResultMsg(ACRCloudExceptionCode::$HTTP_ERROR, $e->getMessage());
+            $result = ExceptionCode::getCodeResultMsg(ExceptionCode::$HTTP_ERROR, $e->getMessage());
         }
 
         return $result;
