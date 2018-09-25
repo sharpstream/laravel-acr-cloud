@@ -37,8 +37,8 @@ ACR_ACCESS_SECRET=***************************
 namespace App\Http\Controllers;
 
 use App\Storage;
-use SharpStream\AcrCloud\Metadata;
-use SharpStream\AcrCloud\Formatter;
+use Sharpstream\AcrCloud\Metadata;
+use Sharpstream\AcrCloud\Formatter;
 use Illuminate\Support\Facades\Cache;
 
 class AcrCloudController extends Controller

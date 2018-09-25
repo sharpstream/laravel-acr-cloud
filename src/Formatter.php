@@ -1,12 +1,12 @@
 <?php
 
-namespace SharpStream\AcrCloud;
+namespace Sharpstream\AcrCloud;
 
 use Carbon\Carbon;
 
 /**
  * Class Formatter
- * @package SharpStream\AcrCloud
+ * @package Sharpstream\AcrCloud
  * @author Frank Clark <frank.clark@sharp-stream.com>
  */
 class Formatter

@@ -1,12 +1,12 @@
 <?php
 
-namespace SharpStream\AcrCloud;
+namespace Sharptream\AcrCloud;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class AcrCloudServiceProvider
- * @package SharpStream\AcrCloud
+ * @package Sharpstream\AcrCloud
  * @author Frank Clark <frank.clark@sharp-stream.com>
  */
 class AcrCloudServiceProvider extends ServiceProvider

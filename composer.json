@@ -26,7 +26,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SharpStream\\AcrCloud\\": "src"
+      "Sharpstream\\AcrCloud\\": "src"
     }
   },
   "autoload-dev": {
@@ -45,10 +45,10 @@
     },
     "laravel": {
       "providers": [
-        "SharpStream\\AcrCloud\\AcrCloudServiceProvider"
+        "Sharpstream\\AcrCloud\\AcrCloudServiceProvider"
       ],
       "aliases": {
-        "AcrCloud": "SharpStream\\AcrCloud\\Facade"
+        "AcrCloud": "Sharpstream\\AcrCloud\\Facade"
       },
       "dont-discover": [
         "*"

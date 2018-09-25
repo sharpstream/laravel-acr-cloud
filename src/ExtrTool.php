@@ -1,10 +1,10 @@
 <?php
 
-namespace SharpStream\AcrCloud;
+namespace Sharpstream\AcrCloud;
 
 /**
  * Class ExtrTool
- * @package SharpStream\AcrCloud
+ * @package Sharpstream\AcrCloud
  * @author Frank Clark <frank.clark@sharp-stream.com>
  * See : https://github.com/acrcloud/acrcloud_sdk_php/tree/master/linux/x86-64/php72
  */
