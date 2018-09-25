@@ -1,6 +1,6 @@
 <?php
 
-namespace Sharptream\AcrCloud;
+namespace Sharpstream\AcrCloud;
 
 use Illuminate\Support\ServiceProvider;
 
