@@ -1,5 +1,9 @@
 # Laravel ACRCloud Package
 
+## NOT MAINTAINED
+I'm not maintaining this repo. It needs a rewrite now that I understand Laravel better, but they haven't updated the PHP executable to be compatible with anyting higher than PHP 7.2 and doesn't seem like ACR cloud are going to at this point.
+
+
 ## Installation
 
 ### Compatibility
